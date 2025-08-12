@@ -7,9 +7,9 @@
 * **Ciclo Lectivo**: 2025
 * **Carrera**: Ingeniería en Informática
 
-## Como Ejecutar el Sistema
+## Como Ejecutar...
    ```bash
-   # Ejecutar el Sistema
+   # Ejecutar el Juego
    python main.py
 
    # Ejecutar todas las Pruebas
