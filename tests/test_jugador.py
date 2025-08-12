@@ -7,3 +7,4 @@ class TestJugador(unittest.TestCase):
         jugador = Jugador("Lucía", "X")
         self.assertEqual(jugador.nombre, "Lucía")
         self.assertEqual(jugador.ficha, "X")
+        
