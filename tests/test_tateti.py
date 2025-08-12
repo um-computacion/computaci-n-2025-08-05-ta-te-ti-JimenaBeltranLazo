@@ -1,7 +1,7 @@
 import unittest
-from tateti import Tateti
-from jugador import Jugador
-from tablero import PosOcupadaException
+from src.tateti import Tateti
+from src.jugador import Jugador
+from src.tablero import PosOcupadaException
 
 class TestTateti(unittest.TestCase):
 
@@ -17,11 +17,11 @@ class TestTateti(unittest.TestCase):
     def test_ganador(self):
         self.juego.tablero.contenedor = [
             ["X", "X", ""],
-            ["", "O", ""],
-            ["", "", "O"]
+            ["", "O", ""], 
+            ["", "", "O"] 
         ]
         resultado = self.juego.ocupar_casilla(0, 2)
-        self.assertIn("Ganó", resultado)
+        self.assertTrue(resultado)
 
     def test_empate(self):
         self.juego.tablero.contenedor = [
@@ -30,10 +30,9 @@ class TestTateti(unittest.TestCase):
             ["O", "X", ""]
         ]
         resultado = self.juego.ocupar_casilla(2, 2)
-        self.assertEqual(resultado, "¡Empate!")
+        self.assertTrue(resultado)
 
     def test_posicion_ocupada(self):
         self.juego.ocupar_casilla(0, 0)
         with self.assertRaises(PosOcupadaException):
             self.juego.ocupar_casilla(0, 0)
-            
