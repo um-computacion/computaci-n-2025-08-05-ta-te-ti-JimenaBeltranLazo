@@ -15,12 +15,12 @@ class Tateti:
 
         # Verificar ganador
         if self.tablero.hay_ganador(self.turno.ficha):
-            print(f"¡Felicidades {self.turno.nombre}! Has ganado el juego.")
+            print(f"¡Felicidades {self.turno.nombre}! Ganaste el juego.")
             return True
 
         # Verificar empate
         if self.tablero.contenedor_lleno():
-            print("¡Es un empate! No hay más movimientos posibles.")
+            print("¡Es un empate! No quedan más movimientos.")
             return True
 
         # Cambiar turno
